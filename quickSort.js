@@ -1,15 +1,13 @@
 function quickSort(arr) {
-    if (arr.length < 2) {
+    if ( arr.length < 2) {
         return arr
     }
 
-    let pivot = arr[arr.length -1]
-    console.log(pivot)
-
+    let pivot = arr[arr.length - 1];
     let leftArr = [];
-    let rightArr = []
+    let rightArr = [];
 
-    for (let i = 0; i < arr.length -1; i++){
+    for (let i = 0; i < arr.length - 1; i++) {
         if (arr[i] < pivot) {
             leftArr.push(arr[i])
         } else {
@@ -17,7 +15,7 @@ function quickSort(arr) {
         }
     }
 
-    return [...quickSort(leftArr), pivot, ...quickSort(rightArr)]
+   return [...quickSort(leftArr), pivot, ...quickSort(rightArr)]
 }
 
-console.log(quickSort([6,4,3,8,-5,23]))
+console.log(quickSort([2,-6,5,3,8,5,20]))
