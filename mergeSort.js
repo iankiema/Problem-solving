@@ -3,24 +3,25 @@ function mergeSort(arr) {
         return arr
     }
 
-    let mid = Math.floor(arr.length / 2);
-    let leftArr = arr.slice(0,mid);
-    let rightArr = arr.slice(mid);
+    let mid = Math.floor(arr.length / 2)
+    let leftArr = arr.slice(0,mid)
+    let rightArr = arr.slice(mid)
 
-    return merge(mergeSort(leftArr), mergeSort(rightArr))
+    return merge(mergeSort(leftArr),mergeSort(rightArr))
 }
 
 function merge(leftArr, rightArr) {
+    let sortedArr = []
 
-    let arrSorted = [];
     while (leftArr.length && rightArr.length) {
-        if (leftArr[0] <= rightArr[0] ) {
-            arrSorted.push(leftArr.shift())
+        if (leftArr[0] <= rightArr[0]) {
+            sortedArr.push(leftArr.shift())
         } else {
-            arrSorted.push(rightArr.shift())
+            sortedArr.push(rightArr.shift())
         }
     }
-    return [...arrSorted, ...leftArr, ...rightArr]
+
+    return [...sortedArr, ...leftArr, ...rightArr]
 }
 
 
