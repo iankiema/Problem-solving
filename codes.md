@@ -22,6 +22,8 @@ Output: [0]
     return non_zero.concat(zero);
   }
 console.log(sortArr([1,0,2,0,4,5]));
+
+
 // Compare arrays and return a new array with any items only found in one of the two given arrays, // but not both. In other words, return the symmetric difference of the two arrays.
 
 // You can return the array with its elements in any order.
